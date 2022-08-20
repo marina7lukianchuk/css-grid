@@ -1,0 +1,398 @@
+@import url(_fonts.scss);
+
+
+body {
+    width: 100%;
+    margin: 0 auto;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.block_title {
+    font-family: 'Delius Unicase';
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.architect_section {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-top: 120px;
+    margin-bottom: 120px;
+}
+
+.architectural_photo_wrapper {
+    display: grid;
+    grid-template-rows: repeat(3, 370px);
+    grid-template-columns: repeat(3, 370px);
+    grid-gap: 30px;
+}
+
+.gallery_photo {
+    border-radius: 20px;
+    filter: brightness(0.7);
+    width: 100%;
+    height: 100%;
+
+    &:hover {
+        filter: none;
+    }
+}
+.architectural_item {
+    display: grid;
+    object-fit: cover;
+    position: relative;
+    border-radius: 20px;
+
+    &::before {
+        content: '\e801';
+        position: absolute;
+        font-family: "fontello";
+        font-style: normal;
+        font-weight: normal;
+        top: 30px;
+        left: 29px;
+        z-index: -1;
+        font-size: 20px;
+        color: #4F4F4F;
+    }
+
+    &::after {
+        content: '\e802';
+        position: absolute;
+        font-family: "fontello";
+        font-style: normal;
+        font-weight: normal;
+        top: 30px;
+        right: 30px;
+        z-index: -1;
+        font-size: 20px;
+        color: #4F4F4F;
+
+    }
+}
+
+.architectural_item:hover .border_for_heart,
+.architectural_item:hover .for_download {
+    cursor: pointer;
+    z-index: 1;
+}
+
+.architectural_item:hover::before,
+.architectural_item:hover::after {
+    z-index: 2;
+}
+
+.border_for_heart {
+    border: 1px solid #FFFFFF;
+    width: 40px;
+    height: 40px;
+    opacity: 0.6;
+    background-color: #E0E0E0;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border-radius: 8px;
+    z-index: -1;
+}
+
+.border_for_heart:active .architectural_item::before {
+    color: red;
+}
+
+
+
+.border_for_heart:hover,
+.for_download:hover {
+    background-color: white;
+    ;
+    opacity: 1;
+}
+
+.for_download {
+    border: 1px solid #FFFFFF;
+    width: 40px;
+    height: 40px;
+    opacity: 0.6;
+    background-color: #E0E0E0;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border-radius: 8px;
+    z-index: -1;
+
+    &:active {
+        background-color: rgb(181, 141, 126);
+    }
+}
+
+
+
+.photo_one {
+    grid-column: 1/2;
+    grid-row: 1;
+}
+
+.photo_two {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+
+}
+
+.photo_three {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.photo_four {
+    grid-column: 3/4;
+    grid-row: 2;
+}
+
+.photo_five {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.photo_six {
+    grid-column: 2/4;
+    grid-row: 3/4;
+}
+
+.photo_section {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    margin-bottom: 120px;
+}
+
+.life_photo_wrapper {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 370px);
+    grid-gap: 30px;
+}
+
+.life_item_photo {
+    display: grid;
+    object-fit: cover;
+    position: relative;
+
+    &::before {
+        content: '\e801';
+        position: absolute;
+        font-family: "fontello";
+        font-style: normal;
+        font-weight: normal;
+        top: 30px;
+        left: 29px;
+        z-index: -1;
+        font-size: 20px;
+        color: #4F4F4F;
+    }
+
+    &::after {
+        content: '\e802';
+        position: absolute;
+        font-family: "fontello";
+        font-style: normal;
+        font-weight: normal;
+        top: 30px;
+        right: 30px;
+        z-index: -1;
+        font-size: 20px;
+        color: #4F4F4F;
+    }
+
+}
+
+.life_item_photo:hover .border_for_heart,
+.life_item_photo:hover .for_download {
+    cursor: pointer;
+    z-index: 1;
+}
+
+.life_item_photo:hover::before,
+.life_item_photo:hover::after {
+    z-index: 2;
+}
+
+
+
+.life_one {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+
+
+}
+
+.life_two {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.life_three {
+    grid-column: 1/3;
+    grid-row: 2/4;
+}
+
+.life_four {
+    grid-column: 3/4;
+    grid-row: 2/4;
+}
+
+.life_five {
+    grid-column: 1/3;
+    grid-row: 4/5;
+}
+
+.life_six {
+    grid-column: 3/4;
+    grid-row: 4/5;
+}
+
+.portrait_photo_wrapper {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+.portrait_item_photo {
+    display: grid;
+    object-fit: cover;
+    position: relative;
+
+    &::before {
+        content: '\e801';
+        position: absolute;
+        font-family: "fontello";
+        font-style: normal;
+        font-weight: normal;
+        top: 30px;
+        left: 29px;
+        z-index: -1;
+        font-size: 20px;
+        color: #4F4F4F;
+    }
+
+    &::after {
+        content: '\e802';
+        position: absolute;
+        font-family: "fontello";
+        font-style: normal;
+        font-weight: normal;
+        top: 30px;
+        right: 30px;
+        z-index: -1;
+        font-size: 20px;
+        color: #4F4F4F;
+    }
+}
+
+.portrait_item_photo:hover .border_for_heart,
+.portrait_item_photo:hover .for_download {
+    z-index: 1;
+    cursor: pointer;
+}
+
+.portrait_item_photo:hover::before,
+.portrait_item_photo:hover::after {
+    z-index: 2;
+}
+
+
+.name_date {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: absolute;
+    bottom: 20px;
+}
+
+.artist_name {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 20px;
+    color: #FFFFFF;
+    line-height: 24px;
+}
+
+.date_photo {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 20px;
+    color: #FFFFFF;
+    line-height: 24px;
+}
+
+
+.portrait_one {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.portrait_two {
+    grid-column: 2/3;
+    grid-row: 1/3;
+}
+
+
+.portrait_three {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+.portrait_four {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.portrait_five {
+    grid-column: 3/4;
+    grid-row: 2/4;
+}
+
+.portrait_six {
+    grid-column: 1/2;
+    grid-row: 3/5;
+}
+
+.portrait_seven {
+    grid-column: 2/3;
+    grid-row: 3;
+}
+
+.portrait_eight {
+    grid-column: 2/4;
+    grid-row: 4/5;
+}
+
+.portrait_nine {
+    grid-column: 1/3;
+    grid-row: 5/6;
+}
+
+.portrait_ten {
+    grid-column: 3/4;
+    grid-row: 5/6;
+
+}
